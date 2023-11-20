@@ -23,7 +23,7 @@ namespace ODataDemo.Controllers
         [EnableQuery]
         public ActionResult<IEnumerable<Department>> GetDepartments()
         {
-            var departments = _context.Departments.Include(d => d.Employees).ToList();
+            var departments = _context.Departments.Include(emps => emps.Employees).Include(ins => ins.Instructors).ToList();
             return Ok(departments);
         }
 

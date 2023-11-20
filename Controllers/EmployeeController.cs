@@ -26,15 +26,6 @@ namespace ODataDemo.Controllers
             var employees = _context.Employees.Include(e => e.Department).ToList();
             return Ok(employees);
         }
-        #region TrialForResponseDTO
-        /*[HttpGet]
-        [EnableQuery]
-        public IQueryable<Employee> GetEmployees()
-        {
-            var employees = _context.Employees.Include(e => e.Department);
-            return employees;
-        }*/ 
-        #endregion
 
         [HttpPost]
         public async Task<ActionResult<Employee>> PostEmployee(EmployeeDTO employeeDto)

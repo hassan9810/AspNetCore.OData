@@ -10,6 +10,7 @@ namespace ODataDemo.Context
         {
         }
         public DbSet<Employee> Employees { get; set; }
+        public DbSet<Instructor> Instructors { get; set; }
         public DbSet<Department> Departments { get; set; }
     }
 }
