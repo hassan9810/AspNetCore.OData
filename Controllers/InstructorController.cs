@@ -17,9 +17,9 @@
             return _instructorRepository.GetInstructorsAsync();
         }
 
-        [HttpGet("GetWithoutDTO")]
+        [HttpGet("GetWithoutResponseDTO")]
         [EnableQuery]
-        public IActionResult GetInstructorsWithoutDTO()
+        public IActionResult GetInstructorsWithoutResponseDTO()
         {
             var query = _instructorRepository.GetInstructorsQueryable();
             var dtoQuery = query.Select(i => new GetAllInstructorDTO
