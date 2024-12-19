@@ -1,13 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.OData.Query;
-using ODataDemo.DTOs;
-using ODataDemo.DTOs.ResponseDTOs;
-using ODataDemo.HelpersDTOs;
-using ODataDemo.Models;
-using ODataDemo.Service;
-
-namespace ODataDemo.Controllers
+﻿namespace ODataDemo.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -24,6 +15,22 @@ namespace ODataDemo.Controllers
         public Task<AllInstructorsResponseDTO> GetInstructors()
         {
             return _instructorRepository.GetInstructorsAsync();
+        }
+
+        [HttpGet("GetWithoutDTO")]
+        [EnableQuery]
+        public IActionResult GetInstructorsWithoutDTO()
+        {
+            var query = _instructorRepository.GetInstructorsQueryable();
+            var dtoQuery = query.Select(i => new GetAllInstructorDTO
+            {
+                Id = i.Id,
+                Name = i.Name,
+                Age = i.Age,
+                DeptId = i.DeptId
+            });
+
+            return Ok(dtoQuery);
         }
 
         [HttpPost]

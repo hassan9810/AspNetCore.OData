@@ -1,11 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using ODataDemo.Context;
-using ODataDemo.DTOs.ResponseDTOs;
-using ODataDemo.HelpersDTOs;
-using ODataDemo.Models;
-using static ODataDemo.Helpers.Enums.Enums;
-
-namespace ODataDemo.Service
+﻿namespace ODataDemo.Service
 {
     public class InstructorRepository : IInstructorRepository
     {
@@ -69,6 +62,10 @@ namespace ODataDemo.Service
                     Result = ex.Message
                 };
             }
+        }
+        public IQueryable<Instructor> GetInstructorsQueryable()
+        {
+            return _context.Instructors.Include(e => e.Department);
         }
     }
 }

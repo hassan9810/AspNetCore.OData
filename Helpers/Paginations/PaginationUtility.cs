@@ -1,8 +1,4 @@
-﻿using ODataDemo.Helpers.GenericSearchFilter;
-using ODataDemo.Helpers.GenericSort;
-using ODataDemo.Helpers.Paginations;
-
-namespace ODataDemo.Helpers.Paginations
+﻿namespace ODataDemo.Helpers.Paginations
 {
     public static class PaginationUtility
     {

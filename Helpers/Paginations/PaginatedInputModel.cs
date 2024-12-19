@@ -1,7 +1,4 @@
-﻿using ODataDemo.Helpers.GenericSearchFilter;
-using ODataDemo.Helpers.GenericSort;
-
-namespace ODataDemo.Helpers.Paginations
+﻿namespace ODataDemo.Helpers.Paginations
 {
     public class PaginatedInputModel
     {

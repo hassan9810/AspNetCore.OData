@@ -1,6 +1,4 @@
-﻿using static ODataDemo.Helpers.Enums.Enums;
-
-namespace ODataDemo.DTOs.ResponseDTOs
+﻿namespace ODataDemo.DTOs.ResponseDTOs
 {
     public abstract class BasicResponseDTO
     {

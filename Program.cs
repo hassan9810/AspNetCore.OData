@@ -1,9 +1,3 @@
-using Microsoft.AspNetCore.OData;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using ODataDemo.Context;
-using ODataDemo.Service;
-
 namespace ODataDemo
 {
     public class Program
@@ -17,8 +11,16 @@ namespace ODataDemo
         options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 
-            builder.Services.AddControllers().AddOData(options =>
-                options.Select().Filter().OrderBy().Expand().Count());
+            /*builder.Services.AddControllers().AddOData(options =>
+                options.Select().Filter().OrderBy().Expand().Count());*/
+
+            builder.Services.AddControllers().AddOData(opt => opt.AddRouteComponents("api", ODataConfig.GetEdmModel())
+                        .Select()
+                        .Expand()
+                        .Filter()
+                        .OrderBy()
+                        .SetMaxTop(100)
+                        .Count());
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();

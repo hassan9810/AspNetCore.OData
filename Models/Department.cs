@@ -1,6 +1,4 @@
-﻿using System.Text.Json.Serialization;
-
-namespace ODataDemo.Models
+﻿namespace ODataDemo.Models
 {
     public class Department
     {

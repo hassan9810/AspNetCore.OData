@@ -1,12 +1,9 @@
-﻿using ODataDemo.DTOs.ResponseDTOs;
-using ODataDemo.HelpersDTOs;
-using ODataDemo.Models;
-
-namespace ODataDemo.Service
+﻿namespace ODataDemo.Service
 {
     public interface IInstructorRepository
     {
         Task<AllInstructorsResponseDTO> GetInstructorsAsync();
         Task<ResponseDTO> AddInstructorAsync(Instructor instructor);
+        IQueryable<Instructor> GetInstructorsQueryable();
     }
 }

@@ -1,6 +1,4 @@
-﻿using static ODataDemo.Helpers.Enums.Enums;
-
-namespace ODataDemo.DTOs.ResponseDTOs
+﻿namespace ODataDemo.DTOs.ResponseDTOs
 {
     public class OldResponseDTO
     {
@@ -10,7 +8,6 @@ namespace ODataDemo.DTOs.ResponseDTOs
         public int TotalItems { get; set; }
         public int PageSize { get; set; }
         public string Message { get; set; }
-
         public StatusEnum StatusEnum { get; set; }
     }
 }

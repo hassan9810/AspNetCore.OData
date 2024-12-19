@@ -1,7 +1,4 @@
-﻿using Microsoft.Net.Http.Headers;
-using Microsoft.OpenApi.Models;
-
-namespace ODataDemo.Helpers.Extensions
+﻿namespace ODataDemo.Helpers.Extensions
 {
     public static class SwaggerExtensions
     {

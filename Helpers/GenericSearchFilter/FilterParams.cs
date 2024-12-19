@@ -1,6 +1,4 @@
-﻿using static ODataDemo.Helpers.Enums.Enums;
-
-namespace ODataDemo.Helpers.GenericSearchFilter
+﻿namespace ODataDemo.Helpers.GenericSearchFilter
 {
     /// <summary>
     /// Filter parameters Model Class

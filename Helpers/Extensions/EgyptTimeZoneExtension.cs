@@ -4,10 +4,10 @@
     {
         public static DateTime ToEgyptTimeZone(this DateTime utcDateTime)
         {
-            TimeSpan saudiOffset = TimeSpan.FromHours(2);
+            TimeSpan cairoOffset = TimeSpan.FromHours(2);
 
-            DateTime saudiArabiaTime = utcDateTime + saudiOffset;
-            return saudiArabiaTime;
+            DateTime cairoTime = utcDateTime + cairoOffset;
+            return cairoTime;
         }
     }
 }

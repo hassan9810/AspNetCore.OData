@@ -1,6 +1,4 @@
-﻿using ODataDemo.DTOs.ResponseDTOs;
-
-namespace ODataDemo.HelpersDTOs
+﻿namespace ODataDemo.HelpersDTOs
 {
     public class AllInstructorsResponseDTO : BasicResponseDTO
     {

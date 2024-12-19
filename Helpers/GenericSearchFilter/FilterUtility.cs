@@ -1,8 +1,4 @@
-﻿using ODataDemo.Helpers.GenericSearchFilter;
-using System.Reflection;
-using static ODataDemo.Helpers.Enums.Enums;
-
-namespace ODataDemo.Helpers.GenericSearchFilter
+﻿namespace ODataDemo.Helpers.GenericSearchFilter
 {
     public class FilterUtility
     {

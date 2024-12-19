@@ -1,7 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using ODataDemo.Models;
-
-namespace ODataDemo.Context
+﻿namespace ODataDemo.Context
 {
     public class ApplicationDbContext : DbContext
     {

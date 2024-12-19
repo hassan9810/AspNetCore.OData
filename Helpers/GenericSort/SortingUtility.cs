@@ -1,7 +1,4 @@
-﻿using System.Reflection;
-using static ODataDemo.Helpers.Enums.Enums;
-
-namespace ODataDemo.Helpers.GenericSort
+﻿namespace ODataDemo.Helpers.GenericSort
 {
     public class SortingUtility
     {
